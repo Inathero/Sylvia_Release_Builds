@@ -1,0 +1,47 @@
+#ifdef properties
+	#define script_name "debug"
+	#define run_on_load false
+#endif
+
+
+#ifdef voice_phrase
+	phrase("attack");
+	if "to the left"
+		audio("attacked left");
+	if "to the right"
+		audio("attacked right");
+#endif
+
+#ifdef voice_phrase
+	phrase("move mouse absolute snap");
+	audio("absolute snap");
+	move_mouse(200, 200, "A");
+#endif
+
+#ifdef voice_phrase
+	phrase("move mouse relative snap");
+	audio("relative snap");
+	move_mouse(200, 200, "R");
+#endif
+
+#ifdef voice_phrase
+	phrase("test");
+	delay(5000);
+	move_mouse(200, 200, "R");
+#endif
+
+#ifdef voice_phrase
+	phrase("explosion");
+	audio("yes sir");
+#endif
+#ifdef voice_phrase
+	phrase("move mouse absolute");
+	audio("absolute interp");
+	move_mouse(200, 200, "A", 1000);
+#endif
+
+#ifdef voice_phrase
+	phrase("move mouse relative");
+	audio("relative interp");
+	move_mouse(200, 200, "R", 1000);
+#endif

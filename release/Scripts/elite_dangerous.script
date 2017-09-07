@@ -1,0 +1,425 @@
+#ifdef properties
+	#define script_name "elite dangerous"
+	#define run_on_load false
+//	#define name Silvia (Disabled, Silvia is hardcoded for now until otherwise for multi-script compatibility)
+//	#define duration 4500 (Also Harcoded at 5s for now)
+#endif
+
+#ifdef global_variables
+	#define user_name "Commander"
+#endif
+
+
+#ifdef voice_phrase
+	phrase("Toggle Ship Lights");
+	audio("Toggling Ship Lights");
+	key_press(DIK_L);
+#endif
+#ifdef voice_phrase
+	phrase("Open Station Services");
+	phrase("Open Starport Services");
+	phrase("Starport Services");
+	audio("Opening Starport Services");
+	key_press(DIK_RETURN);
+#endif
+#ifdef voice_phrase
+	phrase("Open inventory components");
+	phrase("Open inventory materials");
+	audio("Please view the ship's materials here $user_name");
+	key_press(T);
+	delay(150);
+	key_press(E);
+	delay(150);
+	key_press(E);
+	delay(150);
+	key_press(E);
+	delay(150);
+	key_press(DOWN);
+#endif
+#ifdef voice_phrase
+	phrase("Select Highest Threat");
+	phrase("Select High value target");
+	phrase("High value target");
+	phrase("Hostile");
+	audio("Selecting High Value Target.");
+	key_press(DIK_I);
+#endif
+#ifdef voice_phrase
+	phrase("Next Target");
+	phrase("Next Hostile");
+	audio("Selecting Next Target.");
+	key_press(DIK_V);
+#endif
+#ifdef voice_phrase
+	phrase("Target");
+	phrase("Select Target");
+	audio("Selecting Target Ahead.");
+	key_press(DIK_F);
+#endif
+#ifdef voice_phrase
+	phrase("Lets go to the surface");
+	phrase("return to surface");
+	audio("Yes $user_name. Returning to Surface");
+	key_press(DIK_DOWN);
+	delay(10);
+	key_press(DIK_RETURN);
+	delay(75);	
+	key_press(UP);
+#endif
+#ifdef voice_phrase
+	phrase("Launch Ship");
+	audio("Released Constraints. Ship Launched");
+	key_press(DIK_DOWN);
+	delay(30);	
+	key_press(DIK_DOWN);
+	delay(30);	
+	key_press(DIK_RETURN);
+	delay(75);	
+	key_press(UP);
+	delay(30);	
+	key_press(UP);
+	delay(30);	
+#endif	
+#ifdef voice_phrase
+	phrase("Hey silvia");
+	audio("Yes $user_name?");
+#endif
+#ifdef voice_phrase
+	phrase("Sell Module");
+	phrase("Sell Item");
+	audio("Selling Module");
+	key_press(RETURN);
+	delay(200);	
+	key_press(RETURN);
+	delay(110);	
+	key_press(UP);
+	delay(75);	
+	key_press(RETURN);
+#endif
+#ifdef voice_phrase
+	phrase("Raise Landing Gear");
+	phrase("Lower Landing Gear");
+	phrase("Deploy Landing Gear");
+	audio("Affirmative");
+	key_press(DIK_H);
+#endif
+#ifdef voice_phrase
+	phrase("Open Galaxy Map");
+	audio("Opened Galaxy Map");
+	key_press(DIK_M);
+#endif
+#ifdef voice_phrase
+	phrase("Select Wingman Target");
+	audio("Selecting Your Wingman's Target");
+	key_press(DIK_U);
+#endif
+#ifdef voice_phrase
+	phrase("Toggle Silent Running");
+	audio("Toggling Silent Running");
+	key_press(DIK_K);
+#endif
+#ifdef voice_phrase
+	phrase("Deploy Heat Sink");
+	audio("Heat Sink Deploying");
+	key_press(DIK_Y);
+#endif
+#ifdef voice_phrase
+	phrase("Enter Supercruise");
+	audio("Preparing Ship for Supercruise");
+	key_press(DIK_P);
+#endif
+#ifdef voice_phrase
+	phrase("Enter Hyperspace");
+	phrase("Hyperdrive");
+	phrase("Jump Systems");
+	audio("Friendship Drive, Charging");
+	key_press(DIK_O);
+#endif
+#ifdef voice_phrase
+	phrase("Reset Head");
+	phrase("Reset HMD");
+	audio("Resetting your viewport");
+	key_press(J);
+#endif
+#ifdef voice_phrase
+	phrase("Role Panel");
+	phrase("Open Role Panel");
+	audio("Acknowledged");
+	key_press(N);
+#endif
+#ifdef voice_phrase
+	phrase("Target Panel");
+	phrase("Open Target Panel");
+	audio("Affirmative");
+	key_press(B);
+#endif
+#ifdef voice_phrase
+	phrase("Comms Panel");
+	phrase("Communications Panel");
+	phrase("Check Comms");
+	phrase("Open Comms");
+	audio("Acknowledged");
+	key_press(G);
+#endif
+#ifdef voice_phrase
+	phrase("Systems Panel");
+	phrase("Open Systems Panel");
+	audio("Acknowledged");
+	key_press(T);
+#endif
+
+#ifdef voice_phrase
+	#define mode_lock 500
+	phrase("Back");
+	phrase("Go Back");
+	audio("Acknowledged");
+	key_press(BACK);
+#endif
+// audio("Requesting Docking from Station");
+#ifdef voice_phrase
+	phrase("Request Docking");
+	
+	key_press(B); // Systems Panel
+	delay(75);
+	key_press(E);
+	delay(75);
+	key_press(E);
+	delay(75);
+	key_press(RETURN);
+	delay(75);
+	key_press(DOWN);
+	delay(75);	
+	key_press(RETURN);
+	delay(75);
+	key_press(Q);
+	delay(75);
+	key_press(Q);
+	delay(75);
+	key_press(B);
+#endif
+#ifdef voice_phrase
+	phrase("Check Mission Board");
+	phrase("Open Mission Board");
+	audio("Let's see if today's our lucky day");
+	key_press(DOWN);
+	delay(75);	
+	key_press(RETURN);
+#endif	
+#ifdef voice_phrase
+	phrase("Check Contacts");
+	phrase("Open Contacts");
+	audio("It's about time we cashed in our vouchers");
+	key_press(DOWN);
+	delay(75);	
+	key_press(DOWN);
+	delay(75);	
+	key_press(DOWN);
+	delay(75);	
+	key_press(RETURN);
+#endif	
+#ifdef voice_phrase
+	phrase("Check Shipyard");
+	phrase("Open Shipyard");
+	audio("Can't wait to get out of this rusty pile of junk");
+	key_press(RIGHT);
+	delay(75);	
+	key_press(RIGHT);
+	delay(75);	
+	key_press(UP);
+	delay(75);	
+	key_press(UP);
+	delay(75);	
+	key_press(RETURN);
+#endif	
+#ifdef voice_phrase
+	phrase("Check Outfitting");
+	phrase("Open Outfitting");
+	audio("I hope you upgrade all my internals this time");
+	key_press(RIGHT);
+	delay(75);	
+	key_press(RIGHT);
+	delay(75);	
+	key_press(UP);
+	delay(75);	
+	key_press(UP);
+	delay(75);	
+	key_press(UP);
+	delay(75);	
+	key_press(RETURN);
+#endif	
+#ifdef voice_phrase
+	phrase("Next");
+	audio("Acknowledged");
+	key_press(DOWN);
+	delay(75);	
+	key_press(RETURN);
+#endif
+#ifdef voice_phrase
+	phrase("Refuel and Rearm");
+	audio("Refuelling and Rearming. The best time of the day");
+	key_press(RIGHT); // Systems Panel
+	delay(80);
+	key_press(RIGHT); // Systems Panel
+	delay(80);
+	key_press(DOWN); // Systems Panel
+	delay(80);
+	key_press(DOWN); // Systems Panel
+	delay(80);
+	key_press(RETURN); // Systems Panel
+	delay(2000);
+	key_press(DOWN); // Systems Panel
+	delay(80);
+	key_press(RETURN); // Systems Panel
+	delay(2000);
+	key_press(DOWN); // Systems Panel
+	delay(80);
+	key_press(RETURN); // Systems Panel
+#endif
+#ifdef voice_phrase
+	phrase("Enter Hangar");
+	phrase("Enter Station");
+	audio("Lowering Landing Pad. Activating Station Services.");
+	key_press(DOWN); // Systems Panel
+	delay(80);
+	key_press(RETURN);
+	delay(80);
+	key_press(UP);
+	delay(80);
+	key_press(RETURN);
+#endif
+#ifdef voice_phrase
+	phrase("Reedem All Bounties");
+	phrase("Reedem Bounty Vouchers");
+	audio("Pay day came early. I am so excited. You can hear by the tone of my voice");
+	key_press(DOWN); // Systems Panel
+	delay(80);
+	key_press(DOWN);
+	delay(80);
+	key_press(RETURN);
+	delay(80);
+	key_press(DOWN);
+	delay(80);
+	key_press(RETURN);
+#endif
+#ifdef voice_phrase
+
+	phrase("Open System Map");
+	audio("Opening System's Map");
+	key_press(R);
+#endif
+#ifdef voice_phrase
+
+	phrase("please kill yourself");
+	audio("With Pleasure");
+	end_program();
+#endif
+
+
+#ifdef voice_phrase
+
+	phrase("Stop listening");
+	audio("I am silent.");
+	stop_listening();
+#endif
+#ifdef voice_phrase
+
+	phrase("Start listening");
+	audio("I am listening");
+	start_listening();
+#endif
+
+#ifdef voice_phrase
+
+	phrase("How are you doing");
+	audio("I'm doing fine, thanks");
+#endif
+
+#ifdef voice_phrase
+	phrase("You ok?");
+	audio("I'm doing alright, sorry for the concern");
+#endif
+#ifdef voice_phrase
+	phrase("Are you there?");
+	audio("Yes I am. Awaiting orders as always");
+#endif
+
+#ifdef voice_phrase
+	phrase("Pay attention");
+	start_listening();
+	audio("Understood $user_name. I am paying full attention");
+#endif
+	
+// Pips
+#ifdef voice_phrase
+
+	phrase("Full Pips to Engines");
+	phrase("Pips to Engines");
+	audio("Power Diverted to Engines");
+	key_press(UP);
+	delay(50);
+	key_press(UP);
+	delay(50);
+	key_press(UP);
+	delay(50);
+#endif
+#ifdef voice_phrase
+
+	phrase("Full Pips to Weapons");
+	phrase("Pips to Weapons");
+	audio("Power Diverted to Weapons");
+	key_press(RIGHT);
+	delay(50);
+	key_press(RIGHT);
+	delay(50);
+	key_press(RIGHT);
+	delay(50);
+#endif
+#ifdef voice_phrase
+
+	phrase("Full Pips to Shields");
+	phrase("gPips to Shields");
+	audio("Power Diverted to Shields");
+	key_press(LEFT);
+	delay(50);
+	key_press(LEFT);
+	delay(50);
+	key_press(LEFT);
+	delay(50);
+#endif
+#ifdef voice_phrase
+
+	phrase("Balance all power");
+	phrase("Balance pips");
+	audio("Balancing all power systems");
+	key_press(DOWN);
+#endif
+
+#ifdef voice_phrase
+
+	phrase("Search for system");
+	audio("Please spell out the system desired");
+
+	key_press(E);
+	key_press(RETURN);
+	dictation_enable(GALAXY_MAP_SYSTEM_SEARCH); 
+#endif
+
+#ifdef dictation
+	#define dictation_id GALAXY_MAP_SYSTEM_SEARCH
+	audio("Is this the correct system?");
+
+	if "correct" | "affirmative" |  "yes" | "yep"
+		key_press(RETURN);
+		audio("Acknowledged $user_name");
+		dictation_disable();
+
+	if "negative" | "no" | "nope" | "wrong"
+		dictation_erase();
+		audio("Please spell out the system desired");
+		dictation_enable(GALAXY_MAP_SYSTEM_SEARCH); 
+
+	if "cancel" | "back" | "escape" | "abort"
+		dictation_erase();
+		audio("Exiting Dictation Mode $user_name");
+		dictation_disable();
+#endif

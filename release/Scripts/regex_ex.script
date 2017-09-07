@@ -1,0 +1,15 @@
+#ifdef properties
+	#define script_name "regex example"
+	#define run_on_load false
+#endif
+
+#ifdef voice_phrase
+	#define regex "<div id="content">\r\n(.*?)<\/div"
+	#define save
+	#define random_fact
+	phrase("random fact");
+	url_request("http://www.unkno.com", $random_fact);
+	regex($random_fact, $regex, $save, 2); //find the regex match in $random_fact using $regex. save into $regex_match the second match 
+	audio("$save");
+#endif
+	 

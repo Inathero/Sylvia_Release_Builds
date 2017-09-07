@@ -1,0 +1,53 @@
+#ifdef properties
+	#define script_name "weather"
+	#define run_on_load false
+//	#define name Silvia (Disabled, Silvia is hardcoded for now until otherwise for multi-script compatibility)
+//	#define duration 4500 (Also Harcoded at 5s for now)
+#endif
+
+#ifdef global_variables
+	#define conv_state ""
+	#define dictation_text ""
+#endif
+
+#ifdef voice_phrase
+	#define weather_json_doc
+	#define temperature
+	#define location "El Paso"
+	phrase("what's the weather");
+	phrase("what is the weather");
+	phrase("How is the weather");
+	url_request("http://api.wunderground.com/api/ec51b08ab2fa3250/conditions/q/TX/el_paso.json", $weather_json_doc);
+	json_get_value($weather_json_doc, "current_observation|temp_f", $temperature);
+	audio("Current Temperature in $location is $temperature degrees fahrenheit.");
+#endif
+	
+
+#ifdef voice_phrase
+	#define doc
+	#define response
+	phrase("Activate Basic AI");
+	url_request("http://www.cleverbot.com/getreply?key=CC41rJN5yGCIB85Mm6l3hz3p1Vw&input=hello", $doc);
+	json_get_value($doc, "clever_output", $response);
+	json_get_value($doc, "cs", $conv_state);
+	audio("$response");
+	dictation_enable(CLEVERBOT); 
+#endif
+
+#ifdef dictation
+	#define dictation_id CLEVERBOT
+	#define cb_url "http://www.cleverbot.com/getreply?key=CC41rJN5yGCIB85Mm6l3hz3p1Vw&input="
+	#define saver ""
+	#define response
+	append_string($cb_url, $dictation_text);
+	append_string($cb_url, "&cs=");
+	append_string($cb_url, $conv_state);
+
+	url_request($cb_url, $saver);
+
+	json_get_value($saver, "clever_output", $response);
+	json_get_value($saver, "cs", $conv_state);
+	audio("$response");
+	dictation_disable();
+	dictation_enable(CLEVERBOT); 
+#endif

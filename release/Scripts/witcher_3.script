@@ -1,0 +1,78 @@
+#ifdef properties
+	#define script_name "Witcher"
+	#define run_on_load false
+//	#define name Silvia (Disabled, Silvia is hardcoded for now until otherwise for multi-script compatibility)
+//	#define duration 4500 (Also Harcoded at 5s for now)
+#endif
+
+
+#ifdef global_variables
+	#define user_name "John"
+#endif
+
+#ifdef voice_phrase
+	phrase("Call Horse");
+	phrase("Roach come here");
+	key_press(X);
+#endif
+#ifdef voice_phrase
+	phrase("Ard");
+	key_press(3);
+#endif
+#ifdef voice_phrase
+	phrase("Erden");
+	key_press(4);
+#endif
+#ifdef voice_phrase
+	phrase("Igni");
+	key_press(5);
+#endif
+#ifdef voice_phrase
+	phrase("Quen");
+	key_press(6);
+#endif
+#ifdef voice_phrase
+	phrase("Axii");
+	key_press(7);
+#endif
+#ifdef voice_phrase
+	phrase("Toggle Hud");
+	key_press(HOME);
+#endif
+#ifdef voice_phrase
+	phrase("Open Character Panel");
+	phrase("Open Character");
+	key_press(K);
+#endif
+#ifdef voice_phrase
+	phrase("Open Inventory");
+	key_press(I);
+#endif
+#ifdef voice_phrase
+	phrase("Open Map");
+	key_press(M);
+#endif
+#ifdef voice_phrase
+	phrase("Open Quests");
+	key_press(J);
+#endif
+#ifdef voice_phrase
+	phrase("Open Meditation");
+	key_press(N);
+#endif
+#ifdef voice_phrase
+	phrase("Open Alchemy");
+	key_press(L);
+#endif
+#ifdef voice_phrase
+	phrase("Open Crafting");
+	key_press(O);
+#endif
+#ifdef voice_phrase
+	phrase("Open Bestiary");
+	key_press(B);
+#endif
+#ifdef voice_phrase
+	phrase("Quick Save");
+	key_press(F5);
+#endif

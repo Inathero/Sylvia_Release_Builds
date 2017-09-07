@@ -1,0 +1,11 @@
+#define RED		0
+#define ORANGE	30
+#define YELLOW	60
+#define LGREEN	80
+#define GREEN	120
+#define LBLUE	180
+#define BLUE	240
+#define PURPLE	270
+#define MAGENTA	300
+#define PINK	330
+#define RED		360

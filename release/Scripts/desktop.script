@@ -1,0 +1,154 @@
+#ifdef properties
+	#define script_name "desktop"
+	#define run_on_load false
+	#define perma_load true
+//	#define name Silvia (Disabled, Silvia is hardcoded for now until otherwise for multi-script compatibility)
+//	#define duration 4500 (Also Harcoded at 5s for now)
+#endif
+
+#ifdef global_variables
+	#define user_name "John"
+#endif
+
+#ifdef voice_phrase
+	phrase("Pause music");
+	key_press(VK_MEDIA_PLAY_PAUSE);
+#endif
+
+#ifdef voice_phrase
+	phrase("Play music");
+	key_press(VK_MEDIA_PLAY_PAUSE);
+#endif
+
+#ifdef voice_phrase
+	phrase("play next song");
+	phrase("next song");
+	key_press(VK_MEDIA_NEXT_TRACK);
+#endif
+
+#ifdef voice_phrase
+	phrase("previous song");
+	phrase("Play previous song");
+	key_press(VK_MEDIA_PREV_TRACK);
+#endif
+
+#ifdef voice_phrase
+	phrase("previous song");
+	phrase("Play previous song");
+	key_press(VK_MEDIA_PREV_TRACK);
+#endif
+
+#ifdef voice_phrase
+	phrase("Pause");
+	key_press(DIK_SPACE);
+#endif
+	
+#ifdef voice_phrase
+	phrase("take screenshot");
+	key_press(VK_SNAPSHOT);
+#endif
+
+#ifdef voice_phrase
+	phrase("next");
+	phrase("alt tab");
+	
+	key_down(LMENU);
+	key_press(TAB);
+	key_up(LMENU);
+#endif
+#ifdef voice_phrase
+	phrase("Stop listening");
+	audio("I am silent.");
+	stop_listening();
+#endif
+#ifdef voice_phrase
+	phrase("Start listening");
+	audio("I am listening");
+	start_listening();
+#endif
+#ifdef voice_phrase
+	phrase("Lower Volume");
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+	key_press(VK_VOLUME_DOWN);
+	delay(10);
+#endif
+#ifdef voice_phrase
+	phrase("Increase Volume");
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10); key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+	key_press(VK_VOLUME_UP);
+	delay(10);
+#endif
+

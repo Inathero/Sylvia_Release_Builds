@@ -1,0 +1,71 @@
+#ifdef properties
+	#define script_name "factorio"
+	#define run_on_load false
+//	#define name Silvia (Disabled, Silvia is hardcoded for now until otherwise for multi-script compatibility)
+//	#define duration 4500 (Also Harcoded at 5s for now)
+#endif
+
+#ifdef voice_phrase
+	phrase("Hold right");
+	phrase("hold right click");
+	key_down(XM_RIGHT);
+#endif
+#ifdef voice_phrase
+	phrase("Release right");
+	phrase("let go right");	
+	phrase("let go");
+	key_up(XM_RIGHT);
+#endif
+
+#ifdef voice_phrase
+	phrase("click right");
+	key_press(XM_RIGHT);
+#endif
+#ifdef voice_phrase
+	phrase("go back");
+	key_press(ESCAPE);
+#endif
+
+#ifdef voice_phrase
+	phrase("Inventory");
+	key_press(E);
+#endif
+#ifdef voice_phrase
+	phrase("Production");
+	key_press(P);
+#endif
+
+#ifdef voice_phrase
+	phrase("Logistics");
+	key_press(L);
+#endif
+#ifdef voice_phrase
+	phrase("Blueprint");
+	key_press(B);
+#endif
+#ifdef voice_phrase
+	phrase("Connect Train");
+	key_press(B);
+#endif
+#ifdef voice_phrase
+	phrase("Technology");
+	key_press(T);
+#endif
+#ifdef voice_phrase
+	phrase("Tab");
+	key_press(TAB);
+#endif
+#ifdef voice_phrase
+	phrase("Map");
+	key_press(M);
+#endif
+
+
+
+#ifdef voice_phrase
+	phrase("Pause");
+	phrase("Resume");
+	key_down(LSHIFT);
+	key_press(E);
+	key_up(LSHIFT);
+#endif

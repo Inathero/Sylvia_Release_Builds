@@ -1,0 +1,151 @@
+#ifdef plugin_type
+	#define mode read_latest_file
+	#define folder "C:\\Users\\Inathero\\Saved Games\\Frontier Developments\\Elite Dangerous"
+	#define run_on_load false
+#endif
+
+// Hull Damage
+#ifdef regex_extract
+	#define regex "HullDamage", "Health":(\d.\d+)
+	#define regex_match_index 2
+	#define regex_match
+	save_regex_match($regex_match,2);
+	to_percentage($regex_match, "%2.1f");
+	audio("Warning! Hull is at $regex_match Percent!!");
+#endif
+
+//Overheat warning
+#ifdef regex_extract
+	#define regex HeatWarning
+	#define regex_match_index 1
+	#define regex_match
+	save_regex_match($regex_match,1);
+	audio("Warning! Ship's Overheating!");
+#endif
+
+// Commited a crime
+#ifdef regex_extract
+	#define regex "event":"CommitCrime",.*? "Victim":"(.*?)", "Bounty":(.*?) 
+	#define victim_name
+	#define bounty
+	save_regex_match($victim_name,2);
+	save_regex_match($bounty,3);
+	audio("Alert! You have attacked innocent commander $victim_name. We now have a bounty on our heads at $bounty credits");
+#endif
+
+// Obtained bounty
+#ifdef regex_extract
+	#define regex "event":"Bounty",.*? "TotalReward":(.*?),
+	#define bounty
+	save_regex_match($bounty,2);
+	audio("Bounty of $bounty credits has been registered");
+#endif
+// Cargo Scanned
+#ifdef regex_extract
+	#define regex "event":"Scanned", "ScanType":"Cargo"
+	audio("Unauthorized Cargo scan detected!");
+#endif
+// Docked into station
+#ifdef regex_extract
+	#define regex "event":"Docked", "StationName":"(.*?)", .*?"StationAllegiance":"(.*?)", .*?"StationEconomy_Localised":"(.*?)"
+	#define station_name
+	#define station_allegiance
+	#define station_economy
+	save_regex_match($station_name,2);
+	save_regex_match($station_allegiance,3);
+	save_regex_match($station_economy,4);
+	audio("Welcome to $station_name commander. This is a $station_allegiance occupied facility. Station economy is $station_economy");
+#endif
+// Docked into station
+#ifdef regex_extract
+	#define regex "event":"Docked", "StationName":"(.*?)", .*.*"StationEconomy_Localised":"(.*?)"
+	#define station_name
+	#define station_allegiance
+	#define station_economy
+	save_regex_match($station_name,2);
+	save_regex_match($station_economy,3);
+	audio("Welcome to $station_name commander. No major factions owns this facility. Station economy is $station_economy");
+#endif
+
+
+// Undocking station
+#ifdef regex_extract
+	#define regex "event":"Undocked", "StationName":"(.*?)"
+	#define regex_match_index 2
+	#define regex_match
+	save_regex_match($regex_match,2);
+	audio("Undocked from $regex_match commander. Hopefully we can come back soon");
+#endif
+
+// Accepted a mission
+#ifdef regex_extract
+	#define regex "MissionAccepted", "Faction":"(.*?)"
+	#define regex_match_index 2
+	#define regex_match
+	save_regex_match($regex_match,2);
+	audio("$regex_match contract acknowledged");
+
+#endif
+
+// Shields down
+#ifdef regex_extract
+	#define regex "event":"ShieldState", "ShieldsUp":false
+	#define regex_match_index 1
+	#define regex_match
+	save_regex_match($regex_match,1);
+	audio("Shields are down commander!!");
+#endif
+	
+// Shields up
+#ifdef regex_extract
+	#define regex "event":"ShieldState", "ShieldsUp":true
+	#define regex_match_index 1
+	#define regex_match
+	save_regex_match($regex_match,1);
+	audio("Shields are back online!!");
+#endif
+
+// Request Docking
+#ifdef regex_extract
+	#define regex "DockingRequested", "StationName":"(.*?)"
+	#define regex_match_index 2
+	#define regex_match
+	save_regex_match($regex_match,2);
+	audio("Requesting docking from: $regex_match");
+#endif
+
+// Request Dock Accepted
+#ifdef regex_extract
+	#define regex "event":"DockingGranted", "LandingPad":(\d*?),
+	#define regex_match_index 2
+	#define regex_match
+	save_regex_match($regex_match,2);
+	audio("Request Successful. Please approach Landing Pad: $regex_match");	
+#endif
+
+// Escaped an Interdiction
+#ifdef regex_extract
+	#define regex "event":"EscapeInterdiction"
+	#define regex_match_index 1
+	#define regex_match
+	save_regex_match($regex_match,1);
+	audio("I know I'm so desirable but please, interdiction isn't the way to get my attention");	
+#endif
+
+// Receive message
+#ifdef regex_extract
+	#define regex "Message_Localised":"(.*?)"
+	#define regex_match_index 2
+	#define regex_match
+	save_regex_match($regex_match,2);
+	audio("Comm Alert: $regex_match");
+#endif
+
+// Jumping systems
+#ifdef regex_extract
+	#define regex "StartJump", "JumpType":"Hyperspace", "StarSystem":"(.*?)"
+	#define regex_match_index 2
+	#define regex_match
+	save_regex_match($regex_match,2);
+	audio("Preparing entry into: $regex_match");
+#endif

@@ -1,0 +1,80 @@
+#ifdef properties
+	#define script_name "web office"
+	#define run_on_load false
+//	#define name Silvia (Disabled, Silvia is hardcoded for now until otherwise for multi-script compatibility)
+//	#define duration 4500 (Also Harcoded at 5s for now)
+#endif
+
+
+#ifdef global_variables
+	#define user_name "John"
+#endif
+
+#ifdef voice_phrase
+	phrase("New Mail");
+	select_voice("Amy")
+	audio("Opened New mail");
+	key_press(N);
+#endif
+
+#ifdef voice_phrase
+	phrase("Send to Carmen");
+	audio("All Done");
+	key_send("carmen");
+	delay(650);
+	key_press(RETURN);
+#endif
+
+#ifdef voice_phrase
+	phrase("CC to my gmail");
+	audio("CC'd to gmail");
+	key_press(TAB);
+	delay(300);
+	key_press(TAB);
+	delay(150);
+	key_send("john.ciubuc@gmail");
+	delay(650);
+	key_press(RETURN);
+#endif
+
+
+#ifdef voice_phrase
+	phrase("Subject Dictation");
+	audio("Go Ahead");
+	key_press(TAB);
+	delay(100);n
+	dictation_enable(SUBJET_DICT); 
+#endif
+
+#ifdef voice_phrase
+	phrase("Next Field");
+	key_press(TAB);
+#endif
+#ifdef voice_phrase
+	phrase("Switch to Brian");
+	select_voice("Brian");
+	audio("Good Afternoon $user_name, how may I assist you?");
+#endif
+
+#ifdef voice_phrase
+	phrase("Dictation");
+	audio("Listening");
+	dictation_enable(STANDARD)
+#endif
+
+#ifdef voice_phrase
+	phrase("Pay attention");
+	start_listening();
+	audio("Paying Attention $user_name.");
+#endif
+	AttentionBC
+Facing	
+	AttentionBC
+#ifdef dictation
+	#define dictation_id SUBJET_DICT
+	dictation_disable();
+#endif
+#ifdef dictation
+	#define dictation_id STANDARD
+	dictation_disable();
+#endif

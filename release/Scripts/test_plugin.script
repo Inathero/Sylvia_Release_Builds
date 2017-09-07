@@ -1,0 +1,20 @@
+#ifdef properties
+	#define script_name "test"
+	#define is_plugin true
+	#define plugin_target "FTLGame.exe"
+#endif
+
+
+#ifdef colour_plugin
+	#define pixel_coord 365 60
+
+	if NOT GREEN
+		trigger_once();
+		audio("We took damage!");
+
+	if RED
+		audio("It's red!");
+		key_send("it's red! ");
+		delay(500);
+#endif
+

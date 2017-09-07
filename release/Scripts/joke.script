@@ -1,0 +1,8 @@
+#ifdef properties
+	#define script_name "joke"
+	#define run_on_load true
+#endif
+
+#ifdef voice_phrase
+	phrase("fire");
+#endif

@@ -1,0 +1,249 @@
+#ifdef properties
+	#define script_name "blade symphony"
+	#define run_on_load false
+#endif
+
+
+#ifdef global_variables
+	#define user_name "Commander"
+#endif
+
+#ifdef voice_phrase
+	phrase("left string");
+	key_down(A);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(A);
+	delay(750);
+	key_down(A);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(A);
+	delay(750);
+	key_down(A);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(A);
+	delay(750);
+	key_down(A);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(A);
+	delay(750);
+#endif
+#ifdef voice_phrase
+	phrase("right string");
+	key_down(D);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(D);
+	delay(750);
+	key_down(D);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(D);
+	delay(750);
+	key_down(D);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(D);
+	delay(750);
+	key_down(D);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(D);
+	delay(750);
+#endif
+#ifdef voice_phrase
+	phrase("forward");
+	key_down(W);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(W);
+	delay(750);
+	key_down(W);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(W);
+	delay(750);
+	key_down(W);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(W);
+	delay(750);
+	key_down(W);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(W);
+	delay(750);	
+#endif
+#ifdef voice_phrase
+	phrase("combo dodge");
+	key_press(DIK_1);
+	delay(20);
+	key_down(D);
+	delay(20);
+	key_press(DIK_LCONTROL);
+	delay(1000);
+	key_up(D);
+	delay(20);
+	key_down(W);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(400);
+	key_press(XM_LEFT);
+	delay(700);
+	key_press(XM_LEFT);
+	delay(400);
+	key_press(DIK_2);
+	delay(20);	
+	key_down(A);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(A);
+	delay(20);
+	key_press(SPACE);
+	delay(375);
+	key_press(XM_LEFT);
+	key_up(W);
+#endif
+#ifdef voice_phrase
+	phrase("combo two");
+	key_press(DIK_1);
+	delay(20);
+	key_down(W);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(400);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(W);
+	delay(400);
+	key_down(DIK_2);
+	delay(200);
+	delay(20);	
+	key_down(A);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(A);
+	delay(550);
+	key_down(W);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(W);
+#endif
+#ifdef voice_phrase
+	phrase("fast forward");
+	key_press(DIK_1);
+	delay(20);
+	key_down(W);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(375);
+	key_press(XM_LEFT);
+	delay(600);
+	key_press(XM_LEFT);
+	delay(375);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(W);
+#endif
+
+#ifdef voice_phrase
+	phrase("washing machine");
+	delay(20);
+	key_press(DIK_2);
+	delay(20);
+	key_down(W);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(700);
+	key_press(XM_LEFT);
+	key_up(W);
+#endif
+#ifdef voice_phrase
+	phrase("combo one");
+	key_press(DIK_3);
+	delay(20);
+	key_down(W);
+	delay(20);
+	key_down(A);
+	delay(20);
+	key_press(XM_LEFT);
+	delay(20);	
+	key_up(A);
+	delay(20);	
+	key_press(DIK_1);	
+	delay(375);
+	key_press(XM_LEFT);
+	delay(375);
+	key_press(DIK_2);
+	delay(20);	
+	key_press(SPACE);
+	delay(375);
+	key_press(XM_LEFT);
+	delay(375);
+	key_press(DIK_2);
+	delay(20);
+	delay(375);
+	key_press(XM_LEFT);
+	delay(20);
+	key_up(W);
+#endif
+
+#ifdef voice_phrase
+	phrase("fast");
+	key_press(DIK_1);
+	delay(20);
+	key_press(DIK_1);
+	delay(20);
+	key_press(DIK_1);
+	delay(20);
+#endif
+#ifdef voice_phrase
+	phrase("balance");
+	key_press(DIK_2);
+	delay(20);
+	key_press(DIK_2);
+	delay(20);
+	key_press(DIK_2);
+	delay(20);
+#endif
+
+#ifdef voice_phrase
+	phrase("heavy");
+	key_press(DIK_3);
+	delay(20);
+	key_press(DIK_3);
+	delay(20);
+	key_press(DIK_3);
+	delay(20);
+#endif
+
+
+#ifdef voice_phrase
+	phrase("Hey Silvia");
+	audio("HI HI");
+#endif
+
+#ifdef voice_phrase
+	phrase("Ready for round two?");
+	audio("I have learned better combos, let me show them to you!");
+#endif
+
+
