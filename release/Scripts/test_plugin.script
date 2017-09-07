@@ -8,9 +8,10 @@
 #ifdef colour_plugin
 	#define pixel_coord 365 60
 
-	if NOT GREEN
+	if BLACK
 		trigger_once();
 		audio("We took damage!");
+		delay(2000);
 
 	if RED
 		audio("It's red!");

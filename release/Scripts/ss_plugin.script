@@ -1,0 +1,18 @@
+#ifdef properties
+	#define script_name "sunless"
+	#define is_plugin true
+	#define plugin_target "Sunless Skies.exe"
+#endif
+
+
+#ifdef ocr_plugin
+	#define ocr_rect 129 249 304 294
+
+	if "Continue"
+		trigger_once();
+		audio("Continue!");
+
+	if NOT "Continue"
+		trigger_once();
+		audio("No More Continues!");
+#endif
