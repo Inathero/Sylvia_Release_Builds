@@ -5,4 +5,5 @@
 
 #ifdef voice_phrase
 	phrase("fire");
+	key_press(A);
 #endif
