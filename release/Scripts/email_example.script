@@ -1,0 +1,18 @@
+#ifdef properties
+	#define script_name "Email"
+	#define run_on_load false
+#endif
+
+#ifdef voice_phrase
+	phrase("Send Emai");
+
+	email_recipient("john@gmail.com");	
+
+	email_subject("Sylvia's Subject");
+
+	email_body("Sylvia's Body");
+
+	email_audio_succesful("Successfully sent email!");
+
+	email_send();
+#endif
