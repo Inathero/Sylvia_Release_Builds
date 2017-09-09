@@ -1,0 +1,21 @@
+#ifdef properties
+	#define script_name "o c r"
+	#define is_plugin true
+	#define plugin_target "Desktop"
+#endif
+
+
+#ifdef colour_plugin
+	#define pixel_coord 1907 284
+
+	if "GREEN"
+		key_send("G");
+#endif
+#ifdef ocr_plugin
+	#define ocr_rect 1605 175 1800 195
+
+	if "GREEN"
+		key_send("G");
+#endif
+
+

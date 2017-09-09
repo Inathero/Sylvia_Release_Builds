@@ -1,0 +1,20 @@
+#ifdef properties
+	#define script_name "colour"
+	#define is_plugin true
+	#define plugin_target "Desktop"
+#endif
+
+
+#ifdef colour_plugin
+	#define pixel_coord 607 23
+
+	if GREEN
+		key_send("G");
+#endif
+
+#ifdef colour_plugin
+	#define pixel_coord 273 19
+
+	if RED
+		key_send("B");
+#endif
