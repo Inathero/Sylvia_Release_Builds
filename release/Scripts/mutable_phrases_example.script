@@ -1,6 +1,6 @@
 #ifdef properties
 	#define script_name "Mutable Phrases"
-	#define run_on_load true
+	#define run_on_load false
 #endif
 
 #ifdef voice_phrase
