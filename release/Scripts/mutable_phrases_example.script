@@ -1,0 +1,32 @@
+#ifdef properties
+	#define script_name "Mutable Phrases"
+	#define run_on_load true
+#endif
+
+#ifdef voice_phrase
+	#define phrase_type mutable
+	phrase("?please ?give me ?a ?cookie");
+
+	audio("cookie");
+
+	if "give me a cookie"
+		audio("Barbarian");
+
+	if "please give me a cookie"
+		audio("here is the cookie");
+	
+	if "please me"
+		audio("Sit back and relax, commander. winky face");
+
+#endif
+
+
+
+
+
+
+
+
+
+
+
