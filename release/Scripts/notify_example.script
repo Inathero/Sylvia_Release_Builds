@@ -1,0 +1,13 @@
+#ifdef properties
+	#define script_name "Notify"
+	#define run_on_load false
+#endif
+
+#ifdef voice_phrase
+	#define phrase_type mutable
+	phrase("Remind me in * minutes");
+
+	if "Remind me in five minutes"
+		audio("five minutes sure thing");
+		notify_event(300000, "times up");
+#endif
